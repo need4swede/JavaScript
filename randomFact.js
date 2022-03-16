@@ -7,7 +7,7 @@
 */
 
 // FILTER OUT FACTS WITH THESE WORDS!
-factFilter = ["dildo", "orgasm", "penis", "vagina", "dick", "sex", "fuck", "shit", "bitch"];
+factFilter = ["dildo", "orgasm", "penis", "vagina", "dick", "sex"];
 
 // FUNCTION LOGIC
 function getRandomFact() {
