@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" id="css" href="../assets/codeblocks.css">
+    <title>JavaScript - Need4Swede</title>
+</head>
+<header>
+    <!-- COLOR BUTTON -->
+    <div class="colorful-switch">
+      <input type="checkbox" class="colorful-switch__checkbox" id="colorful-switch-cb"/>
+      <label class="colorful-switch__label" for="colorful-switch-cb">
+        <span class="colorful-switch__bg"></span>
+        <span class="colorful-switch__dot"></span>
+        <span class="colorful-switch__on">
+          <span class="colorful-switch__on__inner"></span>
+        </span>
+        <span class="colorful-switch__off"></span>
+      </label>
+      <p id="color-mode-text">Dark Mode</p>
+    </div>
+    <!-- CONSOLE BUTTON -->
+    <div class="colorful-switch-2">
+      <input type="checkbox" class="colorful-switch__checkbox-2" id="colorful-switch-cb-2"/>
+      <label class="colorful-switch__label-2" for="colorful-switch-cb-2">
+        <span class="colorful-switch__bg-2"></span>
+        <span class="colorful-switch__dot-2"></span>
+        <span class="colorful-switch__on-2">
+          <span class="colorful-switch__on__inner-2"></span>
+        </span>
+        <span class="colorful-switch__off-2"></span>
+      </label>
+      <p id="console-mode-text">Enable Console</p>
+    </div>
+</header>
+<body>
+    <h2>How To...</h2>
+    <section>
+<!-- CODE EXAMPLE START -->
+<pre><code class="language-javascript">/*
+  Select a pseudo-code CSS property, like ':before', ':after', etc.
+*/
+
+// Example
+function getPseudoProperty(){
+	let element = document.querySelector('#element');
+	let styles = window.getComputedStyle(element,':before');
+	let content = styles.getPropertyValue("background-image");
+  console.log(content);
+}
+
+// OUTPUT: url('background-image link')
+</code></pre>
+      <p><strong>Solution by</strong> - <a href="https://need4swede.github.io/CodeWars-JavaScript/" target="_blank"><span class="background-black">Need4Swede</span></a></p>
+      <iframe id="jsConsole" src="" width="960" height="0" frameborder="0"></iframe>
+      <iframe id="jsConsole-light" src="" width="960" height="0" frameborder="0"></iframe>
+    </section>
+<!-- CODE EXAMPLE END -->
+    <div class="underline"></div>
+    <h2>How it works</h2>
+    <section class="functions">
+<!-- CODE START -->
+<pre><code class="language-javascript">function countPsumN(input) {
+
+  // If input is empty, return an empty array
+  if (input == null || input.length == 0){
+      return [];
+  }
+  else{
+
+      // Initialize sum and counter
+      let negativeSum = 0;
+      let positiveCount = 0;
+
+      // Add every negative number to sum, and count every positive number
+      input.forEach(number => {
+          if (number < 0){
+              negativeSum += number
+          }
+          else if (number > 0){
+              positiveCount += 1;
+          }
+      });
+
+      // Return the result
+      return [positiveCount, negativeSum];
+
+  }
+}
+</code></pre>
+<!-- CODE END -->
+    <!-- CODEWARS LINK -->
+    <p><strong>Try it yourself</strong> - <a href="https://www.codewars.com/kata/576bb71bbbcf0951d5000044/train/javascript" target="_blank"><span class="background-black">CodeWars Source</span></a></p>
+    </section>
+    </div>
+    <!-- CODE BLOCKS JS -->
+    <script src="../assets/codeblocks.js"></script>
+    <script src="../assets/colors.js"></script>
+</body>
+</html>
