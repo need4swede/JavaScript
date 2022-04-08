@@ -7,7 +7,7 @@
 */
 
 // FILTER OUT FACTS WITH THESE WORDS!
-factFilter = ["Voldemort"];
+factFilter = ["voldemort"];
 
 // FUNCTION LOGIC
 function getRandomFact() {
