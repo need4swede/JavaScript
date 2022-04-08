@@ -42,18 +42,25 @@
 <!-- CODE EXAMPLE START -->
 <div id="start"></div>
 <pre><code class="language-javascript">/*
-  Select a pseudo-code CSS property, like ':before', ':after', etc.
+  ..use a 'forEach' loop
 */
 
-// Example
-function getPseudoProperty(){
-	let element = document.querySelector('#element');
-	let styles = window.getComputedStyle(element,':before');
-	let content = styles.getPropertyValue("background-image");
-  console.log(content);
-}
 
-// OUTPUT: url('background-image link')
+// Syntax
+array.forEach(element => {
+  console.log(element)
+});
+
+
+// Example
+let buttons = document.querySelectorAll('.button');
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    console.log("Button Clicked");
+  });
+});
+
+// OUTPUT: 'Button Clicked'
 </code></pre>
       <p><strong>Solution by</strong> - <a href="https://need4swede.github.io/CodeWars-JavaScript/" target="_blank"><span class="background-black">Need4Swede</span></a></p>
       <iframe id="jsConsole" src="" width="960" height="0" frameborder="0"></iframe>
@@ -64,33 +71,63 @@ function getPseudoProperty(){
     <h2>How it works</h2>
     <section class="functions">
 <!-- CODE START -->
-<pre><code class="language-javascript">function countPsumN(input) {
+<pre><code class="language-javascript">// Let's breakdown our example code
 
-  // If input is empty, return an empty array
-  if (input == null || input.length == 0){
-      return [];
-  }
-  else{
+/*
+  Let's place all elements with the class of 'button' into an array called 'buttons'
+  using the 'querySelectorAll' method.
+*/
 
-      // Initialize sum and counter
-      let negativeSum = 0;
-      let positiveCount = 0;
+let buttons = document.querySelectorAll('.button');
 
-      // Add every negative number to sum, and count every positive number
-      input.forEach(number => {
-          if (number < 0){
-              negativeSum += number
-          }
-          else if (number > 0){
-              positiveCount += 1;
-          }
-      });
 
-      // Return the result
-      return [positiveCount, negativeSum];
+/*
+  We want to loop through 'each' of these elements and give it an event listener.
+  I will break the function down into parts, but you will need it all composed
+  for the function to work.
+*/
 
-  }
-}
+buttons.forEach(button)..
+
+/* 
+  This will loop through the array called 'buttons' that we created
+  earlier and will refer to each element within the array as 'button'
+
+  The parameter 'button' can be called anything. What you call it has
+  no bearing on the function, but it's good coding practice to give
+  it a relevant name for the sake of readability. 
+*/
+
+buttons.forEach(button => {}..
+
+/* 
+  This is where the term 'forEach' starts to make sense.
+
+  Here's what's actually happening:
+  "for each of something in the array, do this.."
+
+  for each = 'forEach()''
+  of something = 'button'
+  in the array, = 'buttons'
+  do this = '=>'
+
+  what you want done = '{}'
+*/
+
+// Let's look at this code again now that we understand it better
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    console.log("Button Clicked");
+  });
+});
+
+/*
+  for each of something in the array, do this.. { add an event listener that console logs
+  the phrase 'Button Clicked' whenever someone clicks on an instance of the thing
+  in our array'}
+*/
+
 </code></pre>
 <!-- CODE END -->
     <!-- CONSOLE LINK -->

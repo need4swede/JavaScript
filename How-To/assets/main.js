@@ -1,6 +1,9 @@
 const colorSwap = document.querySelector('#colorful-switch-cb').addEventListener('click', colorSwap2);
 const buttonConsole = document.querySelector('#colorful-switch-cb-2').addEventListener('click', consoleSwap);
 const cssStyle = document.getElementById('css');
+const goto = document.querySelector('.gotoconsole').addEventListener('click', () => {
+    document.querySelector('#colorful-switch-cb-2').click();
+})
 
 let isLight = false;
 let isConsole = false;
@@ -105,9 +108,3 @@ function consoleButton2(){
     }
 }
 
-
-// window.onload = function() {
-//     let myiFrame = document.getElementById("jsConsole");
-//     let doc = myiFrame.contentDocument;
-//     doc.body.innerHTML = doc.body.innerHTML + '<style>/color: white;/style>';
-// }
