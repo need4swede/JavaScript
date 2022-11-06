@@ -1,11 +1,11 @@
 // SLIDER
 $('li').on('click', function() {
-		var self = $(this);
-		$('.active').removeClass('active');
-		self.addClass('active');
-		self.closest('ul').attr('data-mouse', self.data('mouse') + '');
-		$('.mouse').removeAttr('class').addClass('mouse ' + self.data('mouse'));
-	});
+	var self = $(this);
+	$('.active').removeClass('active');
+	self.addClass('active');
+	self.closest('ul').attr('data-mouse', self.data('mouse') + '');
+	$('.mouse').removeAttr('class').addClass('mouse ' + self.data('mouse'));
+});
 
 // TITLE TEXT
 let infoText = document.getElementById('info');
@@ -49,6 +49,7 @@ function updateText(element){
 	}
 }
 
+// WELCOME MESSAGE
 console.log('%cApple Mouse Gallery', 'color:cyan;');
 console.log(`%cby Mike Afshari`, 'color:lightgreen;');
 console.log(`%cInspired by the work of @joshbader`, 'color:#ffd663;');
